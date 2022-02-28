@@ -1,11 +1,13 @@
 import { useParams , useNavigate } from "react-router-dom";
 import { useUser } from "../../hook/useUser";
-import { useEffect } from "react"
+import { useEffect , useContext } from "react"
+import { DataContext } from "../../context/dataContext"
 
 export function Profil (){
     const { id } = useParams()
     const profils = useUser();
     const navigate = useNavigate();
+    const { age } = useContext(DataContext); 
     
     function getUser(id){
         const user = profils.find(user => user.id === parseInt(id))
@@ -25,7 +27,7 @@ export function Profil (){
     const {nom , url , role} = getUser(id);
     
     return <div className="text-center">
-        <h1>{ nom }</h1>
+        <h1>{ nom } - { age }</h1>
         <img src={url} alt={nom} className="w-25"/>
         <p>role : { role }</p>
         <button className="btn btn-success" onClick={() => navigate("/contact")}>retour à la liste des contacts</button>

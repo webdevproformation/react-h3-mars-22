@@ -9,9 +9,12 @@ import { Articles } from './composants/page/Articles';
 import { Article } from './composants/page/Article';
 import { Profil } from './composants/page/Profil';
 import { NotFound } from './composants/page/NotFound';
+import { DataContextProvider } from "./context/dataContext";
+
 
 function App() {
   return (
+    <DataContextProvider>
     <div className="container">
       <header>
         <Navbar />
@@ -21,8 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact/">
             <Route index element={<Contact />} />
-            <Route path=":id" element={<Profil />} />
-            
+            <Route path=":id" element={<Profil />} />  
           </Route>
 
           {/*  <Route path="/articles" element={<Articles />} />
@@ -38,6 +40,7 @@ function App() {
       </Routes>
       </main>
     </div>
+    </DataContextProvider>
   );
 }
 

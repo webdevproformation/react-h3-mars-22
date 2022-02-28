@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom" ;
+import { useContext } from "react"
+import { DataContext } from "../context/dataContext"
 
 export function Navbar (){
+    const { nom, age } = useContext( DataContext )
     return (
         <nav className="navbar navbar-expand bg-light navbar-light px-4">
+            <span className="navbar-brand">{ nom } { age }</span>
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <Link to="/" className="nav-link">Accueil</Link>
