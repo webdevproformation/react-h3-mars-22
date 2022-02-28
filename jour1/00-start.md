@@ -76,3 +76,13 @@ https://getbootstrap.com/docs/5.1/components/navbar/
 3 Afficher ce composant dans App.js 
 
 4 https://github.com/webdevproformation/react-h3-mars-22
+
+## correction 
+
+- ajouter bootstrap en global dans App.js
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+- autre solution possible installer react-bootstrap 
+
+- créer un dossier qui va contenir les composants dans src
+- créer le composant Navbar.jsx
+- appeler et exécuter le composant Navbar.jsx dans App.js 
