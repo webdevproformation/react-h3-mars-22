@@ -19,6 +19,9 @@ export function Navbar (){
                 <li className="nav-item">
                     <Link to="/articles" className="nav-link">Articles</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/form" className="nav-link">Form</Link>
+                </li>
             </ul>
             <ul  className="navbar-nav ms-5">
                 <li className="nav-item">{nomUser}</li>

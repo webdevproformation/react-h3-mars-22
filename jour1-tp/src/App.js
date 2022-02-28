@@ -11,6 +11,7 @@ import { Profil } from './composants/page/Profil';
 import { NotFound } from './composants/page/NotFound';
 import { DataContextProvider } from "./context/dataContext";
 import { UserContextProvider } from './context/userContext';
+import { Form } from './composants/page/Form';
 
 
 
@@ -38,7 +39,7 @@ function App() {
             <Route index element={<Articles />} />{/*  /articles/ */}
             <Route path=":id" element={<Article />} />{/*  /articles/:id */}
           </Route>
-
+          <Route path="/form" element={<Form />} />
           <Route path="*" element={<NotFound />} />
       </Routes>
       </main>
