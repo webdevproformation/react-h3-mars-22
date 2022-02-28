@@ -29,9 +29,15 @@ ReactDOM.render(
     <Route path="/contact" element={<Contact />} />
 </Routes>
 
+créer les composants Home et Contact 
+
+Modifier le composant Navbar => <Link to="/"> <Link to="/contact"> 
+
+
 ## router version 5 react router dom
 
 <Switch>
     <Route path="/" exact component={Home} />
     <Route path="/contact" component={Contact} />
 </Switch>
+
