@@ -67,10 +67,12 @@ npm i bootstrap
 1 créer un composant Navbar.jsx 
 
 2 ce composant fonctionnel va retourner une barre de menu bootstrap 
-elle contient 2 liens 
-Accueil
-Contact
+- elle contient 2 liens 
+- Accueil
+- Contact
 
 https://getbootstrap.com/docs/5.1/components/navbar/
 
 3 Afficher ce composant dans App.js 
+
+4 https://github.com/webdevproformation/react-h3-mars-22
