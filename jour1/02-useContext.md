@@ -50,7 +50,11 @@ juste une information
 => utiliser ce contexte dans le composant navbar => afficher Mario
 => utiliser ce contexte dans le composant article => à la fin de l'article ajouter la signature suivante : <p>article rédigé par Mario - admin </p>
 
+## cas pratique : 
 
+dans le composant Form => ajouter un nouvel formulaire dans lequel vous allez pouvoir modifier l'age dans le dataContext 
+
+=> réaliser les modifications nécessaires pour pouvoir modifier la valeur 
 
 
 
