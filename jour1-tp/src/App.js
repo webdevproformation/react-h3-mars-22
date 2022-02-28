@@ -10,10 +10,13 @@ import { Article } from './composants/page/Article';
 import { Profil } from './composants/page/Profil';
 import { NotFound } from './composants/page/NotFound';
 import { DataContextProvider } from "./context/dataContext";
+import { UserContextProvider } from './context/userContext';
+
 
 
 function App() {
   return (
+    <UserContextProvider>
     <DataContextProvider>
     <div className="container">
       <header>
@@ -41,6 +44,7 @@ function App() {
       </main>
     </div>
     </DataContextProvider>
+    </UserContextProvider>
   );
 }
 
