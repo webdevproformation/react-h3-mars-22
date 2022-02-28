@@ -15,12 +15,12 @@ export function Articles () {
     useEffect( () => {
         const q = new URLSearchParams(query.search)
         const orderBy = q.get("orderBy") ;
+        const cloneArticle = [...articles];
+        const reverseArticle = cloneArticle.reverse()
         if(orderBy === "DESC"){
-            const cloneArticle = [...articles]; 
-            cloneArticle.reverse();
-            setArticles(cloneArticle)
+            setArticles(reverseArticle)
         } else {
-            setArticles(articles)
+            setArticles(cloneArticle)
         }
     } , [ordre] )
    
@@ -37,8 +37,8 @@ export function Articles () {
     return (
         <div className="row">
             <header className="d-flex justify-content-between align-items-center py-3">
-            <h1>Page des Articles</h1>
-            <button onClick={manageOrder} className="btn btn-dark">changer ordre</button>
+                <h1>Page des Articles</h1>
+                <button onClick={manageOrder} className="btn btn-dark">ordre {ordre}</button>
             </header>
            
             { articles.map( (article, index) => {
