@@ -7,6 +7,7 @@ import { Home } from "./composants/page/Home"
 import { Contact } from "./composants/page/Contact"
 import { Articles } from './composants/page/Articles';
 import { Article } from './composants/page/Article';
+import { Profil } from './composants/page/Profil';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
       <main>
       <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/">
+            <Route index element={<Contact />} />
+            <Route path=":id" element={<Profil />} />
+          </Route>
+
           {/*  <Route path="/articles" element={<Articles />} />
            /route/:id/:titre/:annee 
           <Route path="/articles/:id" element={<Article />} /> */}
