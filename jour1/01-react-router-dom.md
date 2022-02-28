@@ -58,3 +58,13 @@ chaque profil aura id / nom / role / url => https://thispersondoesnotexist.com/i
 contact/:id
 
 3 si vous cliquez sur sur un lien => afficher la contact concerné dans la page 
+
+## navigation programmatique 
+
+déterminer où on va via un hook 
+
+useNavigate
+
+## erreur 404 
+
+créer le composant NotFound 

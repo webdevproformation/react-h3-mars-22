@@ -8,6 +8,7 @@ import { Contact } from "./composants/page/Contact"
 import { Articles } from './composants/page/Articles';
 import { Article } from './composants/page/Article';
 import { Profil } from './composants/page/Profil';
+import { NotFound } from './composants/page/NotFound';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact/">
             <Route index element={<Contact />} />
             <Route path=":id" element={<Profil />} />
+            
           </Route>
 
           {/*  <Route path="/articles" element={<Articles />} />
@@ -31,6 +33,8 @@ function App() {
             <Route index element={<Articles />} />{/*  /articles/ */}
             <Route path=":id" element={<Article />} />{/*  /articles/:id */}
           </Route>
+
+          <Route path="*" element={<NotFound />} />
       </Routes>
       </main>
     </div>
