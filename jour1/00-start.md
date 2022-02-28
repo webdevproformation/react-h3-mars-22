@@ -54,8 +54,8 @@ Composant
 
 => https://reactrouter.com/
 
-laisser le terminal ouvert
-cd jour1-tp
+laisser le terminal ouvert \n
+cd jour1-tp \n
 npm i react-router-dom
 
 => installer bootstrap
