@@ -10,6 +10,9 @@ export function Navbar (){
                 <li className="nav-item">
                     <Link to="/contact" className="nav-link">Contact</Link>
                 </li>
+                <li className="nav-item">
+                    <Link to="/articles" className="nav-link">Articles</Link>
+                </li>
             </ul>
         </nav>
     )

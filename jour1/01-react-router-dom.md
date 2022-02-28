@@ -41,3 +41,10 @@ Modifier le composant Navbar => <Link to="/"> <Link to="/contact">
     <Route path="/contact" component={Contact} />
 </Switch>
 
+## cas pratique 
+
+créer un nouveau composant => Articles 
+
+ce composant sera accessible via l'adresse suivante : /articles
+=> ajouter une nouvelle route dans App.js 
+=> mettre à jour le composant Menu.jsx 
