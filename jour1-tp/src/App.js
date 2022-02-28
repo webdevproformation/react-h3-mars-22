@@ -6,6 +6,7 @@ import { Navbar } from './composants/Navbar';
 import { Home } from "./composants/page/Home"
 import { Contact } from "./composants/page/Contact"
 import { Articles } from './composants/page/Articles';
+import { Article } from './composants/page/Article';
 
 function App() {
   return (
@@ -17,7 +18,14 @@ function App() {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/articles" element={<Articles />} />
+          {/*  <Route path="/articles" element={<Articles />} />
+           /route/:id/:titre/:annee 
+          <Route path="/articles/:id" element={<Article />} /> */}
+          {/* composant Route imbriquée nouvelle syntaxe v6 */}
+          <Route path="/articles/">
+            <Route index element={<Articles />} />{/*  /articles/ */}
+            <Route path=":id" element={<Article />} />{/*  /articles/:id */}
+          </Route>
       </Routes>
       </main>
     </div>
