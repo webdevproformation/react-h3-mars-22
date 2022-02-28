@@ -1,8 +1,30 @@
+import { Link, useLocation } from "react-router-dom"
+import {useState, useEffect} from "react"
+
 import { useUser } from "../../hook/useUser"
-import { Link } from "react-router-dom"
 
 export const Contact = () => {
-    const profils = useUser();
+    const [profils, setProfils] = useState(useUser());
+    const [ordre , setOrdre] = useState("ASC")
+    const query = useLocation();
+
+    useEffect( () => {
+        const q = new URLSearchParams(query.search)
+        const orderBy = q.get("orderBy")
+        console.log(orderBy)
+        const resulat = profils.sort((a , b) => {
+            if (a.nom < b.nom) {
+                return -1;
+              }
+              if (a.nom > b.nom) {
+                return 1;
+              }
+              return 0;
+        })
+        setOrdre("DESC");
+        console.log(resulat); 
+        setProfils(resulat);
+    } , [ordre])
 
     return <div className="row">
         {profils.map( (profil , index) => {
