@@ -37,6 +37,21 @@ créer un fichier dataContext.jsx
 => permet de créer des variables globales dans votre application react 
 
 
+## cas pratique 
+
+créer un contexte UserContext et un Provider  
+juste une information
+
+{
+    nom : "Mario"
+    role : "admin"
+}
+
+=> utiliser ce contexte dans le composant navbar => afficher Mario
+=> utiliser ce contexte dans le composant article => à la fin de l'article ajouter la signature suivante : <p>article rédigé par Mario - admin </p>
+
+
+
 
 
 
