@@ -1,3 +1,16 @@
 {
-    "articles" : []
+  "articles": [
+    {
+      "titre": "avec un titre",
+      "contenu": "un peu de contenu",
+      "categorie": "node",
+      "id": 1
+    },
+    {
+      "titre": "autre essai",
+      "contenu": "toto",
+      "categorie": "node",
+      "id": 2
+    }
+  ]
 }

@@ -1,4 +1,5 @@
 import { useReducer } from "react"
+import axios from "axios";
 
 const initialForm = {
     titre : "",
@@ -26,6 +27,7 @@ export const Form = () => {
     function onSubmit(e){
         e.preventDefault();
         console.log(form);
+        axios.post( "http://localhost:3002/articles", form )
     }
 
     return <>
