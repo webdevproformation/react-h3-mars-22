@@ -53,3 +53,15 @@ const Composant = () => {
     const [a] = useState(null)
     return <p>{a}</p>
 }
+
+// ES6 
+
+const toto = 10 ;
+
+const state = {
+    toto : toto
+}
+
+const state = {
+    toto
+}

@@ -11,5 +11,8 @@ export const Navbar = () => <nav className="navbar navbar-expand bg-dark navbar-
         <li className="nav-item">
             <Link to="/page/3" className="nav-link">Page 3</Link>
         </li>
+        <li className="nav-item">
+            <Link to="/page/4" className="nav-link">Page 4</Link>
+        </li>
     </ul>
 </nav>
