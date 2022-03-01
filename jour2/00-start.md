@@ -65,3 +65,25 @@ const state = {
 const state = {
     toto
 }
+
+## cas pratique
+
+créer le composant Page5 
+3 boutons 
+<button>users</button>
+<button>posts</button>
+<button>comments</button>
+<pre>avec les données récupérées</pre>
+lorsque vous cliquez sur un des boutons requêtes http (fetch)
+https://jsonplaceholder.typicode.com/users/1 (premier bouton)
+https://jsonplaceholder.typicode.com/posts/1 (bouton 2)
+https://jsonplaceholder.typicode.com/comments/1 (bouton 3)
+
+gérer le chargement et gérer si il y a une erreur 
+{
+    data : "données récupérées"
+    loading : false / true
+    erreur : "" / message 
+}
+utiliser useReducer pour gérer ce composant 
+
