@@ -7,28 +7,16 @@
       "id": 3
     },
     {
-      "titre": "un nouvel article",
+      "titre": "un nouvel article - avec un id",
       "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus,",
-      "categorie": "angular"
+      "categorie": "angular",
+      "id": 1
     },
     {
-      "id": 4,
       "titre": "dernier article",
-      "contenu": "nouveau contenu",
+      "contenu": "nouveau contenu modificatio",
       "categorie": "js",
-      "articles": [
-        {
-          "titre": "troisième article",
-          "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus, eu feugiat velit maximus et. Integer ultricies felis dolor, in bibendum magna malesuada eu. Maecenas elementum orci sem, at molestie diam ornare vel. Donec dapibus nunc a justo sollicitudin dignissim. Donec nec lacus magna. ",
-          "categorie": "node",
-          "id": 3
-        },
-        {
-          "titre": "un nouvel article",
-          "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus,",
-          "categorie": "angular"
-        }
-      ]
+      "id": 4
     },
     {
       "titre": "Modification du titre",
