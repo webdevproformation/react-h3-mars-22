@@ -7,7 +7,8 @@ const initialForm = {
     titre : "",
     contenu : "",
     categorie : "",
-    articles : []
+    articles : [],
+    auteur : ""
 }
 
 function reducerForm( state , action ){
@@ -18,6 +19,8 @@ function reducerForm( state , action ){
             return {...state , contenu : action.payload}
         case "categorie" :
             return {...state , categorie : action.payload}
+        case "auteur" :
+                return {...state , auteur : action.payload}
         case "GET_ARTICLES" : 
             return {...state , articles : action.payload}
         case "DELETE_ARTICLE" :
@@ -27,6 +30,7 @@ function reducerForm( state , action ){
                     titre : action.payload.article.titre,
                     contenu : action.payload.article.contenu,
                     categorie : action.payload.article.categorie ,
+                    auteur : action.payload.article.auteur , 
                     id : action.payload.id
                 }
         default :
@@ -43,7 +47,8 @@ export const Form = () => {
         const data = {
             titre : form.titre,
             contenu : form.contenu,
-            categorie : form.categorie
+            categorie : form.categorie,
+            auteur : form.auteur
         }
         if(form.id === ""){
             axios.post( "http://localhost:3002/articles", data )
@@ -82,13 +87,15 @@ export const Form = () => {
                     <option value="node">node</option>
                     <option value="angular">angular</option>
                 </select>
-                <input type="submit" className="btn btn-outline-success mt-4" />
+                <input type="text" value={form.auteur} onChange={ (e) => dispatch({type : "auteur" , payload : e.target.value})} className="form-control my-4" placeholder="le nom de l'auteur"/>
+                <input type="submit" className="btn btn-outline-success" />
             </form>
             <div className="col-6">
                 {form.articles.map((article, index) => {
                     return <article key={index}>
                         <h3>{article.titre} <span className="badge bg-danger">{article.categorie}</span></h3>
                         <p>{article.contenu}</p>
+                        <p>{article?.auteur}</p>
                         <button className="btn btn-sm btn-dark" onClick={() => onDelete(article.id)}>suppr</button>
                         <button className="btn btn-sm btn-warning ms-3" onClick={() => onUpdate(article.id)}>modif</button>
                         <hr />

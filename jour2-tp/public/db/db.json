@@ -23,6 +23,13 @@
       "contenu": "Modification du contenu",
       "categorie": "js",
       "id": 5
+    },
+    {
+      "titre": "test",
+      "contenu": "test",
+      "categorie": "node",
+      "auteur": "un auteur",
+      "id": 7
     }
   ]
 }

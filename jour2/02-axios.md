@@ -52,7 +52,7 @@ axios.delete("url/id")
 
 --------------
 
-si vous cliquer sur le bouton modifier => réécrire les informations dans le formulaire de gauche 
+si vous cliquez sur le bouton modifier => réécrire les informations dans le formulaire de gauche 
 ajouter un champ id 
 
 
