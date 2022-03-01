@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect } from "react";
 
 const initialForm = {
+    id : "", 
     titre : "",
     contenu : "",
     categorie : "",
@@ -21,6 +22,13 @@ function reducerForm( state , action ){
             return {...state , articles : action.payload}
         case "DELETE_ARTICLE" :
             return {...state , articles : state.articles.filter( article => article.id !== action.payload  )}
+        case "REMPLIR_FORM" :
+            return {...state , 
+                    titre : action.payload.article.titre,
+                    contenu : action.payload.article.contenu,
+                    categorie : action.payload.article.categorie ,
+                    id : action.payload.id
+                }
         default :
             return state ; 
     }
@@ -32,8 +40,17 @@ export const Form = () => {
 
     function onSubmit(e){
         e.preventDefault();
-        console.log(form);
-        axios.post( "http://localhost:3002/articles", form )
+        const data = {
+            titre : form.titre,
+            contenu : form.contenu,
+            categorie : form.categorie
+        }
+        if(form.id === ""){
+            axios.post( "http://localhost:3002/articles", data )
+        }else {
+            axios.put( `http://localhost:3002/articles/${form.id}`, data )
+        }
+       
     }
 
     useEffect( () => {
@@ -45,11 +62,18 @@ export const Form = () => {
         dispatch({type : "DELETE_ARTICLE" , payload : id})
         )
     }
+    const onUpdate = (id) => {
+       const articleAModifier =  form.articles.find(article => article.id === id)
+       console.log(articleAModifier);
+
+       dispatch({type : "REMPLIR_FORM" , payload : {id , article: articleAModifier}})
+    }
 
     return <>
         <h1>Form !</h1>
         <div className="row">
             <form className="col-6" onSubmit={onSubmit}>
+                <input type="hidden" value={form.id} />
                 <input type="text" placeholder="le titre" className="form-control" value={form.titre} onChange={ (e) => dispatch({type : "titre" , payload : e.target.value})}/>
                 <textarea placeholder="le contenu" className="form-control my-4" value={form.contenu} onChange={ (e) => dispatch({type : "contenu" , payload : e.target.value})}></textarea>
                 <select className="form-select" value={form.categorie} onChange={ (e) => dispatch({type : "categorie" , payload : e.target[e.target.selectedIndex].value})}>
@@ -63,12 +87,11 @@ export const Form = () => {
             <div className="col-6">
                 {form.articles.map((article, index) => {
                     return <article key={index}>
-                        <h3>{article.titre} <span class="badge bg-danger">{article.categorie}</span></h3>
+                        <h3>{article.titre} <span className="badge bg-danger">{article.categorie}</span></h3>
                         <p>{article.contenu}</p>
                         <button className="btn btn-sm btn-dark" onClick={() => onDelete(article.id)}>suppr</button>
-                        <button className="btn btn-sm btn-warning ms-3">modif</button>
+                        <button className="btn btn-sm btn-warning ms-3" onClick={() => onUpdate(article.id)}>modif</button>
                         <hr />
-
                     </article>
                 })}
             </div>
