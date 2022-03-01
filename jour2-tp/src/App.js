@@ -7,6 +7,7 @@ import {Page3} from "./composants/Page3"
 import {Page4} from "./composants/Page4"
 import {Page5} from "./composants/Page5"
 import { UserContextProvider } from "./contexts/userContext";
+import { Form } from "./composants/Form";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="page/3" element={<Page3 />} />
             <Route path="page/4" element={<Page4 />} />
             <Route path="page/5" element={<Page5 />} />
+            <Route path="form" element={<Form />} />
           </Route>
         </Routes>
       </main>

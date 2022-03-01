@@ -17,5 +17,8 @@ export const Navbar = () => <nav className="navbar navbar-expand bg-dark navbar-
         <li className="nav-item">
             <Link to="/page/5" className="nav-link">Page 5</Link>
         </li>
+        <li className="nav-item">
+            <Link to="/form" className="nav-link">Formulaire</Link>
+        </li>
     </ul>
 </nav>
