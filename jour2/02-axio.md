@@ -55,3 +55,7 @@ axios.delete("url/id")
 si vous cliquer sur le bouton modifier => réécrire les informations dans le formulaire de gauche 
 ajouter un champ id 
 
+
+## ajouter un nouveau champ dans le formulaire 
+
+ auteur => modifier le state et les fonctions pour que cette nouvelle valeur soit prise en compte 
