@@ -17,9 +17,10 @@ function reducerForm( state , action ){
             return {...state , contenu : action.payload}
         case "categorie" :
             return {...state , categorie : action.payload}
-        case "GET_ARTICLES" : {
+        case "GET_ARTICLES" : 
             return {...state , articles : action.payload}
-        }
+        case "DELETE_ARTICLE" :
+            return {...state , articles : state.articles.filter( article => article.id !== action.payload  )}
         default :
             return state ; 
     }
@@ -38,6 +39,12 @@ export const Form = () => {
     useEffect( () => {
         axios.get("http://localhost:3002/articles").then( ({data}) => dispatch({type:"GET_ARTICLES" , payload : data}))
     } , [])
+
+    const onDelete = (id) => {
+        axios.delete(`http://localhost:3002/articles/${id}`).then(({data}) => 
+        dispatch({type : "DELETE_ARTICLE" , payload : id})
+        )
+    }
 
     return <>
         <h1>Form !</h1>
@@ -58,6 +65,10 @@ export const Form = () => {
                     return <article key={index}>
                         <h3>{article.titre} <span class="badge bg-danger">{article.categorie}</span></h3>
                         <p>{article.contenu}</p>
+                        <button className="btn btn-sm btn-dark" onClick={() => onDelete(article.id)}>suppr</button>
+                        <button className="btn btn-sm btn-warning ms-3">modif</button>
+                        <hr />
+
                     </article>
                 })}
             </div>

@@ -1,18 +1,6 @@
 {
   "articles": [
     {
-      "titre": "avec un titre",
-      "contenu": "un peu de contenu",
-      "categorie": "node",
-      "id": 1
-    },
-    {
-      "titre": "autre essai",
-      "contenu": "toto",
-      "categorie": "node",
-      "id": 2
-    },
-    {
       "titre": "troisième article",
       "contenu": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus, eu feugiat velit maximus et. Integer ultricies felis dolor, in bibendum magna malesuada eu. Maecenas elementum orci sem, at molestie diam ornare vel. Donec dapibus nunc a justo sollicitudin dignissim. Donec nec lacus magna. ",
       "categorie": "node",
@@ -21,28 +9,7 @@
     {
       "titre": "un nouvel article",
       "contenu": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus,",
-      "categorie": "angular",
-      "articles": [
-        {
-          "titre": "avec un titre",
-          "contenu": "un peu de contenu",
-          "categorie": "node",
-          "id": 1
-        },
-        {
-          "titre": "autre essai",
-          "contenu": "toto",
-          "categorie": "node",
-          "id": 2
-        },
-        {
-          "titre": "troisième article",
-          "contenu": "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus, eu feugiat velit maximus et. Integer ultricies felis dolor, in bibendum magna malesuada eu. Maecenas elementum orci sem, at molestie diam ornare vel. Donec dapibus nunc a justo sollicitudin dignissim. Donec nec lacus magna. ",
-          "categorie": "node",
-          "id": 3
-        }
-      ],
-      "id": 4
+      "categorie": "angular"
     }
   ]
 }

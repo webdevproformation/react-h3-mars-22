@@ -43,3 +43,15 @@ axios.delete("url/id")
 ## cas pratique afficher la liste de tous les articles en base de données à la suite du formulaire
 
 useEffect // useState 
+
+## ajouter deux boutons en dessous de chaque article 
+supprimer / modifier 
+
+si vous cliquez sur le bouton supprimer => supprimer en base de données
+axios.delete("url/id")
+
+--------------
+
+si vous cliquer sur le bouton modifier => réécrire les informations dans le formulaire de gauche 
+ajouter un champ id 
+
