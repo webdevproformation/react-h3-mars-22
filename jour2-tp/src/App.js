@@ -6,9 +6,11 @@ import {Page2} from "./composants/Page2"
 import {Page3} from "./composants/Page3"
 import {Page4} from "./composants/Page4"
 import {Page5} from "./composants/Page5"
+import { UserContextProvider } from "./contexts/userContext";
 
 function App() {
   return (
+    <UserContextProvider>
     <Router>
     <div className="container">
       <header>
@@ -27,6 +29,7 @@ function App() {
       </main>
     </div>
     </Router>
+    </UserContextProvider>
   );
 }
 
