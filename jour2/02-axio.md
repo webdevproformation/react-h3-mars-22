@@ -32,3 +32,14 @@ utiliser bootstrap pour la mise en forme du composant
 ## installer axios 
 
 npm i axios
+
+envoyer des infos pour les enregistrer en base de données 
+
+axios.post("url" , {})
+axios.get("url")
+axios.put("url/id" , {})
+axios.delete("url/id")
+
+## cas pratique afficher la liste de tous les articles en base de données à la suite du formulaire
+
+useEffect // useState 

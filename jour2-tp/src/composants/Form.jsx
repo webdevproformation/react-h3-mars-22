@@ -1,10 +1,12 @@
 import { useReducer } from "react"
 import axios from "axios";
+import { useEffect } from "react";
 
 const initialForm = {
     titre : "",
     contenu : "",
-    categorie : ""
+    categorie : "",
+    articles : []
 }
 
 function reducerForm( state , action ){
@@ -15,6 +17,9 @@ function reducerForm( state , action ){
             return {...state , contenu : action.payload}
         case "categorie" :
             return {...state , categorie : action.payload}
+        case "GET_ARTICLES" : {
+            return {...state , articles : action.payload}
+        }
         default :
             return state ; 
     }
@@ -30,6 +35,10 @@ export const Form = () => {
         axios.post( "http://localhost:3002/articles", form )
     }
 
+    useEffect( () => {
+        axios.get("http://localhost:3002/articles").then( ({data}) => dispatch({type:"GET_ARTICLES" , payload : data}))
+    } , [])
+
     return <>
         <h1>Form !</h1>
         <div className="row">
@@ -44,6 +53,14 @@ export const Form = () => {
                 </select>
                 <input type="submit" className="btn btn-outline-success mt-4" />
             </form>
+            <div className="col-6">
+                {form.articles.map((article, index) => {
+                    return <article key={index}>
+                        <h3>{article.titre} <span class="badge bg-danger">{article.categorie}</span></h3>
+                        <p>{article.contenu}</p>
+                    </article>
+                })}
+            </div>
         </div>
     </>
 }
