@@ -81,7 +81,7 @@ https://jsonplaceholder.typicode.com/comments/1 (bouton 3)
 
 gérer le chargement et gérer si il y a une erreur 
 {
-    data : "données récupérées"
+    data : "données récupérées" / []
     loading : false / true
     erreur : "" / message 
 }
