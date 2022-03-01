@@ -11,7 +11,7 @@ function reduceNb(state , action ){ // state , action => { modifier le state }
             return state - 1 ;
         case "AUGMENTER" :
             return state + 1 ;
-        default :
+        default : // quand on charge 
             return state ; 
     }
 }
