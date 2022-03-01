@@ -2,7 +2,16 @@ import { createContext } from "react";
 import { useReducer } from "react"
 
 function userReducer(state, action){
-    return state ; 
+    switch(action.type){
+        case "UPDATE_PROFIL" :
+            return {...state , 
+                    login : action.payload.login , 
+                    password : action.payload.mdp 
+            }
+        default :
+            return state ; 
+    }
+    
 }
 export const UserContext = createContext() 
 // composant pour récupérer les informations
