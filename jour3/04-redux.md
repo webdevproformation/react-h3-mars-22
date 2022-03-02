@@ -34,5 +34,8 @@ redux-devtools-extension => communiquer Redux avec l'extension sur la navigateur
 ## créer un nouveau projet 
 
 npx create-react-app redux
-
+cd redux
 npm i redux react-redux redux-thunk redux-devtools-extension axios
+npm start
+
+## setup dans le fichier src/index.js
