@@ -16,8 +16,7 @@ function userReducer(state, action){
 
 let initialUser = {
     isLogged : false ,
-    pseudo : "",
-    age : 123
+    pseudo : ""
 };
 
 export const UserContextProvider = ({children}) => {

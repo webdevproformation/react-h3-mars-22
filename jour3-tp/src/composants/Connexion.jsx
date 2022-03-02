@@ -1,5 +1,5 @@
 import { useState , useContext } from "react";
-import axios from "axios";
+import { Auth } from "../service/Auth"
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/userContext";
 
@@ -14,23 +14,7 @@ export const Connexion = () => {
     }
     function onSubmit(e){
         e.preventDefault();
-       
-        axios.get(`http://localhost:3002/users?login=${form.login}&password=${form.password}`)
-        .then(({data}) => {
-            if(data.length === 1){
-                    // enregistrer le pseudo dans le UserContext => setUser
-                    const profil = {isLogged : true , pseudo : data[0].pseudo}
-                    dispatch({type : "CONNEXION" , payload : profil})
-                    /* setUser(prevUser => {
-                            return {...prevUser, ...profil}
-                        }) */
-
-                    console.log(data);
-                   navigate("/admin")
-                   localStorage.setItem("profil" , JSON.stringify(profil))
-            }
-        })
-
+        Auth.login(form, dispatch , navigate)
     }
 
     return (

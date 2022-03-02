@@ -2,15 +2,14 @@ import { Link } from "react-router-dom"
 import { UserContext } from "../context/userContext"
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import {Auth} from "../service/Auth"
 
 export const Navbar = () => {
     const { isLogged , dispatch } = useContext(UserContext);
     const navigate = useNavigate()
 
     const logout = () => {
-        localStorage.removeItem("profil") ; // suppression localstorage
-        navigate("/connexion")
-        dispatch({type : "LOGOUT" })
+        Auth.logout(navigate, dispatch)
     }
 
     return <nav className="navbar navbar-expand bg-primary navbar-dark px-4">
@@ -26,7 +25,7 @@ export const Navbar = () => {
                 <Link to="/admin" className="nav-link">Gérer les articles</Link>
             </li>
             <li className="nav-item">
-                <button onClick={logout}>Déconnexion</button>
+                <button onClick={logout} className="btn btn-link text-light">Déconnexion</button>
             </li>
         </ul>
         : 
