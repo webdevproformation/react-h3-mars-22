@@ -39,3 +39,13 @@ npm i redux react-redux redux-thunk redux-devtools-extension axios
 npm start
 
 ## setup dans le fichier src/index.js
+
+
+// dans la fonction reductrice de user 
+
+1 appeler l'api https://jsonplaceholder.typicode.com/users/1
+la charger dans le store
+
+2 dispatch dans le fichier index.js 
+
+3 afficher le profil utilisateur dans le composant App.js 
