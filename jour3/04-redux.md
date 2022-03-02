@@ -40,7 +40,6 @@ npm start
 
 ## setup dans le fichier src/index.js
 
-
 // dans la fonction reductrice de user 
 
 1 appeler l'api https://jsonplaceholder.typicode.com/users/1

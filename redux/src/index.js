@@ -24,12 +24,14 @@ import thunk from "redux-thunk"
 
 import reducer from "./reducers"; // pas besoin d'ajouter index 
 import {getAllPost} from "./actions/article" ;
+import {getUser1} from "./actions/user" ;
 
 const store = createStore( reducer , 
   composeWithDevTools(applyMiddleware(thunk))
 )
 
 store.dispatch(getAllPost()) ; // curring 
+store.dispatch(getUser1()) ; // curring 
 
 
 ReactDOM.render(
