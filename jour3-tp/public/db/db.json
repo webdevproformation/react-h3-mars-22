@@ -1,0 +1,4 @@
+{
+    "articles" : [],
+    "users" : [ {"id" : 1 , "login" : "a" , "password" : "a" , "pseudo" : "Alain"} ] 
+}

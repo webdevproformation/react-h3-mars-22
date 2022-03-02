@@ -22,4 +22,9 @@ deux tables
 users : [ {id : 1 : login : "" , password : "" , pseudo : ""} ]
 articles : [{id : 1 , titre : "" , body "": , dt_creation : "" , pseudo : ""}]
 
-
+{
+    titre : "",
+    body : "",
+    pseudo : "contexte",
+    dt_creation : new Date()
+}
