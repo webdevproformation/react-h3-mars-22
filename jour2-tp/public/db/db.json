@@ -2,8 +2,9 @@
   "articles": [
     {
       "titre": "troisième article - modification",
-      "contenu": "Toto - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus, eu feugiat velit maximus et. Integer ultricies felis dolor, in bibendum magna malesuada eu. Maecenas elementum orci sem, at molestie diam ornare vel. Donec dapibus nunc a justo sollicitudin dignissim. Donec nec lacus magna. ",
+      "contenu": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum fermentum nibh id orci commodo pellentesque. Maecenas vitae ligula vitae lorem consequat euismod. Vestibulum efficitur arcu quis tortor venenatis congue. Curabitur a velit orci. Nullam elementum maximus risus, eu feugiat velit maximus et. Integer ultricies felis dolor, in bibendum magna malesuada eu. Maecenas elementum orci sem, at molestie diam ornare vel. Donec dapibus nunc a justo sollicitudin dignissim. Donec nec lacus magna. ",
       "categorie": "js",
+      "auteur": "Victor Hugo",
       "id": 3
     },
     {
