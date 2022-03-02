@@ -23,16 +23,14 @@ import thunk from "redux-thunk"
 } */
 
 import reducer from "./reducers"; // pas besoin d'ajouter index 
+import {getAllPost} from "./actions/article" ;
 
 const store = createStore( reducer , 
   composeWithDevTools(applyMiddleware(thunk))
 )
 
-store.dispatch({type : "test" , payload : 1})
-store.dispatch({type : "test" , payload : 2})
-store.dispatch({type : "test" , payload : 3})
+store.dispatch(getAllPost()) ; // curring 
 
-store.getState()
 
 ReactDOM.render(
   <React.StrictMode>
