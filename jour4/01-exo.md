@@ -9,6 +9,7 @@
 - ajouter un formulaire avec 1 champ input + btn submit
 - une fois que vous cliquez sur le bouton submit => modifier le titre du 1er article par la valeur que vous avez saisi !
 
+## Array et Object 
 
 const user = { name : "Lena" , age : 12}
 
