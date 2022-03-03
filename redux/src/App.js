@@ -3,6 +3,7 @@
 import {useSelector , useDispatch} from "react-redux";
 import { MODIF_NOM_USER , modifUserName } from "./actions/user";
 import {deleteFirst} from "./actions/article"
+import { Form } from "./composants/Form";
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
@@ -31,6 +32,9 @@ function App() {
         {JSON.stringify(user , null , " ")}
       </pre>
       <button onClick={supprPremier}>suppr premier article</button>
+      <hr/>
+        <Form />
+      <hr/>
       <main>
         {articles.length > 0 && <>
           {articles.map((article, index) => {
