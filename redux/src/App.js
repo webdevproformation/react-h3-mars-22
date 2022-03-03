@@ -1,9 +1,11 @@
 
-import {useSelector} from "react-redux";
+import { useEffect } from "react";
+import {useSelector , useDispatch} from "react-redux";
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
   const user = useSelector((state) => {return state.userReducer})
+
   console.log(user);
   return (
     <div className="App">
