@@ -2,7 +2,7 @@
 
 import {useSelector , useDispatch} from "react-redux";
 import { MODIF_NOM_USER , modifUserName } from "./actions/user";
-import {DELETE_FIRST} from "./actions/article"
+import {deleteFirst} from "./actions/article"
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
@@ -17,7 +17,7 @@ function App() {
     dispatch(modifUserName())
   }
   function supprPremier(){
-    dispatch({type:DELETE_FIRST})
+    dispatch(deleteFirst())
   }
 
   console.log(user);

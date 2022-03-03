@@ -9,3 +9,7 @@ export function getAllPost () {
             .then( ({data}) => dispatch({type : GET_ALL_POSTS , payload : data} ) )
     }
 }
+
+export function deleteFirst(){
+    return {type:DELETE_FIRST}
+}
