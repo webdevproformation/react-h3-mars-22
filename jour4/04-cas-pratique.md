@@ -25,3 +25,10 @@
 
 - Bonus => page de Login / Password 
 si vous êtes authentifié correctement => vous pouvez accéder à l'historique des recherches 
+
+package.json
+"api" : "json-server --watch ./public/db/db.json --port 3002"
+
+dans un terminal
+
+npm run api
