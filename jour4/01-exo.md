@@ -4,6 +4,10 @@
 - lorsque vous cliquez dessus supprimer le 1er article dans la liste des articles
 - si vous recliquez ça va supprimer le suivant !
 
+## cas pratique 
+
+- ajouter un formulaire avec 1 champ input + btn submit
+- une fois que vous cliquez sur le bouton submit => modifier le titre du 1er article par la valeur que vous avez saisi !
 
 
 const user = { name : "Lena" , age : 12}
