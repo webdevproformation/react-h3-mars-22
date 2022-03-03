@@ -2,6 +2,7 @@ import {useSelector , useDispatch} from "react-redux";
 import { MODIF_NOM_USER , modifUserName } from "./actions/user";
 import {deleteFirst} from "./actions/article"
 import { Form } from "./composants/Form";
+import { FormCompetence } from "./composants/FormCompetence";
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
@@ -26,7 +27,9 @@ function App() {
         <h1>Découverte de Redux</h1>
       </header>
       <button onClick={modifNomUser}>Changer le nom de l'utilisateur</button>
+      <FormCompetence />
       <pre>
+        {user?.competences != null && JSON.stringify([...user.competences.values() ], null , " ")}
         {JSON.stringify(user , null , " ")}
       </pre>
       <button onClick={supprPremier}>suppr premier article</button>
