@@ -31,3 +31,11 @@ en JS
 [].length == 0
 {}.length == 0 erreur
 Object.keys({}).length == 0
+
+## cas 
+
+ajouter un nouveau formulaire permettre d'ajouter une nouvelle propriété à notre user 
+
+1 ajouter un formulaire avec un seul champ => input de type text et submit
+2 cliquer le submit => ajouter une nouvelle propriété à user => competence de type tableau 
+3 à chaque fois que vous cliquez sur le bouton submit push() un nouvel item dans ce tableau 
