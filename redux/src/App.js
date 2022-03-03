@@ -1,7 +1,8 @@
 
 
 import {useSelector , useDispatch} from "react-redux";
-import { MODIF_NOM_USER , modifUserName } from "./actions/user"
+import { MODIF_NOM_USER , modifUserName } from "./actions/user";
+import {DELETE_FIRST} from "./actions/article"
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
@@ -15,6 +16,9 @@ function App() {
   function modifNomUser(){
     dispatch(modifUserName())
   }
+  function supprPremier(){
+    dispatch({type:DELETE_FIRST})
+  }
 
   console.log(user);
   return (
@@ -26,6 +30,7 @@ function App() {
       <pre>
         {JSON.stringify(user , null , " ")}
       </pre>
+      <button onClick={supprPremier}>suppr premier article</button>
       <main>
         {articles.length > 0 && <>
           {articles.map((article, index) => {
