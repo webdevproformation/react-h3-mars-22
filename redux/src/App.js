@@ -1,10 +1,20 @@
 
-import { useEffect } from "react";
+
 import {useSelector , useDispatch} from "react-redux";
+import { MODIF_NOM_USER , modifUserName } from "./actions/user"
 
 function App() {
   const articles = useSelector((state) => { return state.articleReducer})
   const user = useSelector((state) => {return state.userReducer})
+  const dispatch = useDispatch()
+
+  /* function modifNomUser(){
+    dispatch({type:MODIF_NOM_USER , payload : "Alain"})
+  } */
+
+  function modifNomUser(){
+    dispatch(modifUserName())
+  }
 
   console.log(user);
   return (
@@ -12,6 +22,7 @@ function App() {
       <header>
         <h1>Découverte de Redux</h1>
       </header>
+      <button onClick={modifNomUser}>Changer le nom de l'utilisateur</button>
       <pre>
         {JSON.stringify(user , null , " ")}
       </pre>
